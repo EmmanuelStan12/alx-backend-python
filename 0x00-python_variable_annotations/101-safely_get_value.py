@@ -6,11 +6,11 @@ from typing import TypeVar, Mapping, Any, Union, TypeAlias
 
 
 T = TypeVar('T')
-D: TypeAlias = Union[T, None]
-R: TypeAlias = Union[Any, T]
+Def: TypeAlias = Union[T, None]
+Res: TypeAlias = Union[Any, T]
 
 
-def safely_get_value(dct: Mapping, key: Any, default: D = None) -> R:
+def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> Res:
     """
     Generics in python annotations
     """
