@@ -2,13 +2,15 @@
 """
 More involved type annotations
 """
-from typing import TypeVar, Mapping, Any, Union
+from typing import TypeVar, Mapping, Any, Union, TypeAlias
 
 
 T = TypeVar('T')
+D: TypeAlias = Union[T, None]
+R: TypeAlias = Union[Any, T]
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[T, None] = None) -> Union[T, None]:
+def safely_get_value(dct: Mapping, key: Any, default: D = None) -> R:
     """
     Generics in python annotations
     """
